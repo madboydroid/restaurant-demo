@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Restoran Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+<aside class="sidebar"><h2>🍽️ Restoran</h2></aside>
+<main class="main">
+<header class="header">
+<h1>Siparişler</h1>
+<button class="new-order">+ Yeni Sipariş</button>
+</header>
+<table>
+<thead><tr><th>#</th><th>Müşteri</th><th>Ödeme</th><th>Tutar</th><th>Durum</th></tr></thead>
+<tbody id="orders"></tbody>
+</table>
+</main>
+</div>
+
+<div id="orderModal" class="modal">
+<div class="modal-content">
+<input id="customerName" placeholder="Müşteri">
+<input id="customerPhone" placeholder="Telefon">
+<select id="paymentType"><option>Nakit</option><option>Kredi</option></select>
+<input id="totalAmount" placeholder="Tutar">
+<button onclick="saveOrder()">Kaydet</button>
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
